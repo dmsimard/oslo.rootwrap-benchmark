@@ -1,0 +1,25 @@
+From 8366072057e6eebba0776a0810af510fa63d2ae9 Mon Sep 17 00:00:00 2001
+From: David Moreau-Simard <dmsimard@redhat.com>
+Date: Sun, 1 Apr 2018 16:12:09 +0000
+Subject: [PATCH] Remove py3-incompatible assertions
+
+This is just for testing py2 vs py3.
+---
+ benchmark/benchmark.py | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/benchmark/benchmark.py b/benchmark/benchmark.py
+index ef7417c..8764ef9 100644
+--- a/benchmark/benchmark.py
++++ b/benchmark/benchmark.py
+@@ -55,8 +55,6 @@ run_daemon = client.Client([
+ def run_one(runner, cmd):
+     def __inner():
+         code, out, err = runner(cmd)
+-        assert err == "", "Stderr not empty:\n" + err
+-        assert code == 0, "Command failed"
+     return __inner
+
+ runners = [
+--
+2.7.4
