@@ -1,6 +1,20 @@
 oslo.rootwrap-benchmark
 -----------------------
 
+Approximate averages when running from an up to date Fedora 27 laptop:
+
+- Ubuntu: 30s
+- CentOS: 33s
+- Fedora: 1m39s
+
+Approximate averages when running from an up to date CentOS 7 virtual machine:
+
+- Ubuntu: 41s
+- CentOS: 49s
+- Fedora: 3m52s
+
+For full raw results, see within the ``results`` directory of each distribution.
+
 Run::
 
     # Python2 with CentOS 7
