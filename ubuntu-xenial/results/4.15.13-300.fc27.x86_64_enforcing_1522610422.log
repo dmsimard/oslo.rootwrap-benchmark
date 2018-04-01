@@ -1,0 +1,20 @@
+Sun Apr  1 19:20:23 UTC 2018
+/oslo.rootwrap /
+Tox version: 2.3.1 imported from /usr/lib/python3/dist-packages/tox/__init__.py
+Running 'ip a':
+        method          :    min       avg       max       dev    
+                   ip a :   1.208ms   1.301ms   1.781ms 105.388us
+              sudo ip a :   4.494ms   4.733ms   5.427ms 184.208us
+sudo rootwrap conf ip a : 135.860ms 138.939ms 148.173ms   1.981ms
+     daemon.run('ip a') :   2.004ms   3.522ms 140.569ms  13.774ms
+Running 'ip netns exec bench_ns ip a':
+                    method                     :    min       avg       max       dev    
+              sudo ip netns exec bench_ns ip a :   4.505ms   4.870ms   5.503ms 211.405us
+sudo rootwrap conf ip netns exec bench_ns ip a : 135.894ms 139.783ms 176.641ms   4.351ms
+     daemon.run('ip netns exec bench_ns ip a') :   1.965ms   2.156ms   2.717ms 190.410us
+
+real	0m29.715s
+user	0m24.396s
+sys	0m4.844s
+/
+Sun Apr  1 19:20:53 UTC 2018
