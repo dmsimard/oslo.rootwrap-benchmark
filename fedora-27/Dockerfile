@@ -1,4 +1,4 @@
-FROM centos:7
+FROM fedora:27
 MAINTAINER David Moreau-Simard <dmsimard@redhat.com>
 
 COPY files/* /tmp/

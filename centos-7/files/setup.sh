@@ -1,10 +1,12 @@
 #!/bin/bash
-dnf -y update
-dnf -y install python3-pip \
-  python3-devel \
-  python3-tox \
+yum -y update
+yum -y install python-setuptools \
+  python-devel \
   git \
   gcc \
   sudo \
   iproute \
   patch
+
+easy_install pip
+pip install tox
